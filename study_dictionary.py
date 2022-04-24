@@ -19,11 +19,13 @@ def main():
         'last name': 'Kwon'
     }
     print('\nlist default items below')
+    print('============================')
     for key in this_dict:
         print('key: ', end='')      # print without newline
         print(key, end='')          # print without newline
         print('\tvalue: ', end='')  # print without newline
         print(this_dict[key])
+    print('============================\n')
 
     cmd = 0
     while cmd != 6:
@@ -34,7 +36,11 @@ def main():
         print('4. Display item using key')
         print('5. List all items')
         print('6. Exit program')
-        cmd = int(input('Type command number: '))
+        cmd_str = input('Type command number: ')
+        if cmd_str.isdigit():
+            cmd = int(cmd_str)
+        else:
+            cmd = 0
 
         match cmd:
             case 1:
@@ -43,7 +49,7 @@ def main():
                     print('item with the key already exists. Try again with different key')
                 else:
                     value = input('Type value for new item: ')
-                    this_dict['key'] = value
+                    this_dict[key] = value
                     print('new item [' + key + ', ' + value + '] is added\n')
             case 2:
                 key = input('Type key to remove a item: ')
