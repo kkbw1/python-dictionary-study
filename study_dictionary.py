@@ -1,6 +1,6 @@
 def main():
     print("Hello World!")
-
+    print("Starting study dictionary python script")
     # # tests simple number inputs
     # x1 = int(input('input x1: '))
     # x2 = int(input('input x2: '))
