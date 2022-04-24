@@ -54,7 +54,14 @@ def main():
                     print('item does not exist with the key.')
                 print('\n')
             case 3:
-                print('Will implement later...\n')
+                key = input('Type key to remove a item: ')
+                if key in this_dict:
+                    old_value = this_dict[key]
+                    value = input('Type value for new item: ')
+                    this_dict[key] = value
+                    print(old_value + ' is replaced to ' + value + ' in this_dict[' + key + ']')
+                else:
+                    print('item does not exist with the key.')
             case 4:
                 key = input('Type key to find value: ')
                 if key in this_dict:
